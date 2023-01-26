@@ -1,0 +1,233 @@
+body {
+    height: 100vh;
+    background: url(../img/backs/Pattern.png) center (center / cover) no-repeat;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+}
+.main__header {
+    color: #FFFFFF;
+    font-size: 36px;
+    font-family: 'Exo 2.0', sans-serif;
+    font-weight: 100;
+}
+.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1120px;
+    &__block {
+        height: 510px;
+        text-align: center;
+    }
+    &__item {
+        position: relative;
+        width: 320px;
+        height: 480px;
+        background: #F2F2F2;
+        border-radius: 12px;
+        border: 4px solid #1698D9;
+        padding-top: 20px;
+        overflow: hidden;
+        -webkit-clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+                clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+        cursor: pointer;
+        &:hover {
+            border: 4px solid #2EA8E6;
+            -webkit-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            transition: 0.5s all;
+            .card__round {
+                background: #2EA8E6;
+                -webkit-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                transition: 0.5s all;
+            }
+            &::before {
+                border-bottom: 4px solid #2EA8E6;
+                -webkit-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                transition: 0.5s all;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -35.3%;
+            right: 85.8%;
+            top: -12.77%;
+            bottom: 88.32%;
+            border-bottom: 4px solid #1698D9;
+            -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+            background-color: transparent;
+        }
+    }
+    &__header {
+        font-weight: 400;
+        font-size: 16px;
+        color: #666666;
+    }
+    &__wrapper {
+        display: block;
+        margin: 0 auto;
+        width: 211px;
+        height: 116px;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 48px;
+        text-align: left;
+    }
+    &__text {
+        font-size: 24px;
+        text-align: left;
+        font-weight: 700;
+    }
+    &__descr {
+        text-align: left;
+        font-weight: 400;
+        font-size: 14px;
+        color: #666666;
+        margin-top: 15px;
+    }
+    &__img {
+        margin-top: 45px;
+    }
+    &__round {
+        position: absolute;
+        padding-top: 11px;
+        right: 10px;
+        bottom: 10px;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        font-size: 42px;
+        background: #1698D9;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 31px;
+        div {
+            font-size: 21px;
+        }
+    }
+    &__buy {
+        margin-top: 14px;
+        font-weight: 400;
+        font-size: 13px;
+        color: #FFFFFF;
+        a {
+            color: #1698D9;
+            -webkit-text-decoration-style: dashed;
+                    text-decoration-style: dashed;
+        }
+        span {
+            color: #1698D9;
+            margin-left: -4px;
+        }
+    }
+    &__currentdescr {
+        display: none;
+        margin-top: 14px;
+        font-weight: 400;
+        font-size: 13px;
+        color: #FFFFFF;
+    }
+    &__active {
+        border: 4px solid #D91667;
+        width: 320px;
+        .card__round {
+            background: #D91667;
+        }
+        &:hover {
+            border: 4px solid #E52E7A;
+            -webkit-transition: 0.5s all;
+            -o-transition: 0.5s all;
+            transition: 0.5s all;
+            .card__round {
+                background: #E52E7A;
+                -webkit-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                transition: 0.5s all;
+            }
+            &::before {
+                border-bottom: 4px solid #E52E7A; 
+                -webkit-transition: 0.5s all; 
+                -o-transition: 0.5s all; 
+                transition: 0.5s all;
+            }
+        }
+        &::before {
+            border-bottom: 4px solid #D91667;
+        }
+    }
+    &__disabled {
+        .card__item {
+            background: #f2f2f2;
+            border: 4px solid #b3b3b3;
+            &:hover {
+                .card__round {
+                    background: #b3b3b3;
+                }
+            }
+            &::before {
+                border-bottom: 4px solid #b3b3b3;
+            }
+            
+        }
+        .card__header {
+            color: #b3b3b3;
+        }
+        .card__name {
+            color: #b3b3b3;
+            opacity: 0.7;
+        }
+        .card__text {
+            color: #b3b3b3;
+            opacity: 0.7;
+        }
+        .card__descr {
+            color: #b3b3b3;
+        }
+        .card__img {
+            opacity: 0.5;
+        }
+        .card__round {
+            background: #B3B3B3;
+        }
+    }   
+}
